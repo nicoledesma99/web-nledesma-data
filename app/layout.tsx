@@ -14,11 +14,30 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+const siteUrl = "https://web-nledesma-data.vercel.app";
+const ogImage = `${siteUrl}/og-image.png`;
+
 export const metadata: Metadata = {
   title: "Nicolás Ledesma — Data & BI Analyst",
   description:
     "Transformo datos operativos en decisiones de negocio. Dashboards, modelos predictivos y automatización para salud, agro e industria.",
   keywords: ["data analyst", "BI", "Power BI", "SQL", "Python", "dashboards"],
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: "Nicolás Ledesma — Data & BI Analyst",
+    description:
+      "Transformo datos operativos en decisiones de negocio. Dashboards, modelos predictivos y automatización para salud, agro e industria.",
+    url: siteUrl,
+    siteName: "Nicolás Ledesma",
+    images: [{ url: ogImage }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nicolás Ledesma — Data & BI Analyst",
+    description: "Transformo datos operativos en decisiones de negocio.",
+    images: [ogImage],
+  },
 };
 
 export default function RootLayout({
