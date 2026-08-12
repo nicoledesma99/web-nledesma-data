@@ -50,7 +50,7 @@ export default function Experience() {
           <div>
             <FadeIn>
               <div className="mb-10">
-                <p className="font-mono text-[10px] text-[#444] uppercase tracking-widest mb-3">
+                <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-3">
                   03 / experiencia
                 </p>
                 <h2 className="text-2xl sm:text-3xl font-light text-white">
@@ -75,16 +75,16 @@ export default function Experience() {
                             : "bg-[#0a0a0a] border-white/30"
                         }`}
                       />
-                      <p className="font-mono text-[10px] text-[#444] tracking-wider mb-1">
+                      <p className="font-mono text-[10px] text-white tracking-wider mb-1">
                         {e.period}
                       </p>
                       <p className="text-white text-sm font-light mb-0.5">
                         {e.role}
                       </p>
-                      <p className="font-mono text-xs text-[#555] mb-2">
+                      <p className="font-mono text-xs text-white mb-2">
                         {e.company}
                       </p>
-                      <p className="text-[#555] text-xs leading-relaxed">
+                      <p className="text-white text-xs leading-relaxed">
                         {e.description}
                       </p>
                     </div>
@@ -98,7 +98,7 @@ export default function Experience() {
           <div>
             <FadeIn>
               <div className="mb-10">
-                <p className="font-mono text-[10px] text-[#444] uppercase tracking-widest mb-3">
+                <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-3">
                   04 / formación
                 </p>
                 <h2 className="text-2xl sm:text-3xl font-light text-white">
@@ -111,10 +111,10 @@ export default function Experience() {
               {education.map((e, i) => (
                 <FadeIn key={i} delay={i * 80}>
                   <div className="border-l border-white/10 pl-5">
-                    <p className="font-mono text-[10px] text-[#444] uppercase tracking-widest mb-1">
+                    <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-1">
                       {e.institution}
                     </p>
-                    <p className="text-[#888] text-sm font-light">{e.title}</p>
+                    <p className="text-white text-sm font-light">{e.title}</p>
                   </div>
                 </FadeIn>
               ))}

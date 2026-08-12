@@ -43,14 +43,14 @@ export default function ProjectModal({
       <div className="fixed top-0 left-0 right-0 z-[101] flex items-center justify-between px-5 h-14 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/5">
         <button
           onClick={onClose}
-          className="font-mono text-[13px] text-[#666] hover:text-white transition-colors duration-200 flex items-center gap-2"
+          className="font-mono text-[13px] text-white hover:text-white transition-colors duration-200 flex items-center gap-2"
         >
           ← Volver a proyectos
         </button>
         <button
           onClick={onClose}
           aria-label="Cerrar"
-          className="w-9 h-9 flex items-center justify-center border border-white/15 text-[#555] hover:text-white hover:border-white/50 transition-all duration-200 font-mono text-xl leading-none"
+          className="w-9 h-9 flex items-center justify-center border border-white/15 text-white hover:text-white hover:border-white/50 transition-all duration-200 font-mono text-xl leading-none"
         >
           ×
         </button>
@@ -59,7 +59,7 @@ export default function ProjectModal({
       <div className="max-w-7xl mx-auto px-6 pt-20 pb-20">
         {/* Header */}
         <div className="border-b border-white/5 pb-8 mb-10 pt-4">
-          <p className="font-mono text-[10px] text-[#444] uppercase tracking-widest mb-4">
+          <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-4">
             {tag}
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight">
@@ -70,22 +70,22 @@ export default function ProjectModal({
         {/* Problema / Solución / Impacto */}
         <div className="grid sm:grid-cols-3 gap-px bg-white/5 mb-10">
           <div className="bg-[#0a0a0a] p-6 sm:p-7">
-            <p className="font-mono text-[10px] text-[#999] uppercase tracking-widest mb-4">
+            <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-4">
               Problema
             </p>
-            <p className="text-[#ccc] text-base leading-[1.7]">{problem}</p>
+            <p className="text-white text-base leading-[1.7]">{problem}</p>
           </div>
           <div className="bg-[#0a0a0a] p-6 sm:p-7">
-            <p className="font-mono text-[10px] text-[#999] uppercase tracking-widest mb-4">
+            <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-4">
               Solución
             </p>
-            <p className="text-[#ccc] text-base leading-[1.7]">{solution}</p>
+            <p className="text-white text-base leading-[1.7]">{solution}</p>
           </div>
           <div className="bg-[#0a0a0a] p-6 sm:p-7">
-            <p className="font-mono text-[10px] text-[#999] uppercase tracking-widest mb-4">
+            <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-4">
               Impacto
             </p>
-            <p className="text-[#ccc] text-base leading-[1.7]">{impact}</p>
+            <p className="text-white text-base leading-[1.7]">{impact}</p>
           </div>
         </div>
 
@@ -94,7 +94,7 @@ export default function ProjectModal({
           {stack.map((tech) => (
             <span
               key={tech}
-              className="font-mono text-[10px] text-[#555] border border-white/10 px-3 py-1.5 tracking-wide"
+              className="font-mono text-[10px] text-white border border-white/10 px-3 py-1.5 tracking-wide"
             >
               {tech}
             </span>

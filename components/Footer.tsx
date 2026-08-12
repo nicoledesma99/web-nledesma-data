@@ -53,23 +53,23 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-1">
             <p className="font-mono text-sm mb-2">
-              <span className="text-[#444]">nico</span>
-              <span className="text-[#666]">ledesma</span>
+              <span className="text-white">nico</span>
+              <span className="text-white">ledesma</span>
             </p>
-            <p className="font-mono text-[10px] text-[#333] leading-relaxed">
+            <p className="font-mono text-[10px] text-white leading-relaxed">
               Data & BI Analyst<br />Córdoba, Argentina
             </p>
           </div>
 
           {/* Quick links */}
           <div>
-            <p className="font-mono text-[10px] text-[#333] uppercase tracking-widest mb-3">Navegación</p>
+            <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-3">Navegación</p>
             <ul className="space-y-2">
               {navLinks.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="font-mono text-xs text-[#444] hover:text-white transition-colors duration-200"
+                    className="font-mono text-xs text-white hover:text-white transition-colors duration-200"
                   >
                     {l.label}
                   </a>
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <p className="font-mono text-[10px] text-[#333] uppercase tracking-widest mb-3">Contacto</p>
+            <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-3">Contacto</p>
             <ul className="space-y-2">
               {socialLinks.map((l) => (
                 <li key={l.label}>
@@ -88,9 +88,9 @@ export default function Footer() {
                     href={l.href}
                     target={l.href.startsWith("mailto") ? undefined : "_blank"}
                     rel="noopener noreferrer"
-                    className="font-mono text-xs text-[#444] hover:text-white transition-colors duration-200 flex items-center gap-2"
+                    className="font-mono text-xs text-white hover:text-white transition-colors duration-200 flex items-center gap-2"
                   >
-                    <span className="text-[#333]">{l.icon}</span>
+                    <span className="text-white">{l.icon}</span>
                     {l.label}
                   </a>
                 </li>
@@ -100,10 +100,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="font-mono text-[10px] text-[#333] tracking-wider">
+          <p className="font-mono text-[10px] text-white tracking-wider">
             © 2026 Nicolás Ledesma
           </p>
-          <p className="font-mono text-[10px] text-[#333] tracking-wider">
+          <p className="font-mono text-[10px] text-white tracking-wider">
             Córdoba, AR
           </p>
         </div>

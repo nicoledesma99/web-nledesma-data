@@ -27,7 +27,7 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
         <a href="#" className="font-mono text-sm tracking-tight">
-          <span className="text-[#666]">nico</span>
+          <span className="text-white">nico</span>
           <span className="text-white">ledesma</span>
         </a>
         <ul className="hidden sm:flex items-center gap-6">
@@ -35,7 +35,7 @@ export default function Nav() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="font-mono text-xs text-[#666] hover:text-white transition-colors duration-200 tracking-wider uppercase"
+                className="font-mono text-xs text-white hover:text-white transition-colors duration-200 tracking-wider uppercase"
               >
                 {l.label}
               </a>
@@ -44,7 +44,7 @@ export default function Nav() {
         </ul>
         {/* Mobile: minimal */}
         <div className="sm:hidden">
-          <a href="#contacto" className="font-mono text-xs text-[#666] hover:text-white transition-colors">
+          <a href="#contacto" className="font-mono text-xs text-white hover:text-white transition-colors">
             contacto
           </a>
         </div>

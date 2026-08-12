@@ -1,7 +1,15 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import FadeIn from "./FadeIn";
 import ProjectModal, { type ProjectData } from "./ProjectModal";
+
+interface CaseStudyData {
+  tag: string;
+  title: string;
+  href: string;
+  cta: string;
+}
 
 const projects: ProjectData[] = [
   {
@@ -42,17 +50,14 @@ const projects: ProjectData[] = [
     stack: ["HTML", "CSS", "JavaScript", "Recharts"],
     iframeSrc: "https://mockups-bi-2.vercel.app/src/pages/mockup-feedlot.html",
   },
+];
+
+const caseStudies: CaseStudyData[] = [
   {
-    tag: "MACHINE LEARNING · WEB APP",
-    title: "Modelo Predictivo de Resultados — Mundial FIFA 2026",
-    problem:
-      "Predicción de resultados de partidos del Mundial 2026 usando datos históricos y modelos de machine learning.",
-    solution:
-      "App web con modelos predictivos entrenados sobre rankings FIFA, historial de enfrentamientos y performance histórica de selecciones.",
-    impact:
-      "Modelo predictivo funcional desplegado en producción.",
-    stack: ["Python", "Scikit-learn", "React", "FastAPI"],
-    iframeSrc: "https://wc2026-predictor-1-psmq.onrender.com/",
+    tag: "SALUD · DATA ENGINEERING",
+    title: "Lakehouse Medallion & Agente Text-to-SQL — Salud Domiciliaria",
+    href: "/proyectos/fabric-lakehouse",
+    cta: "Ver caso →",
   },
 ];
 
@@ -84,7 +89,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6">
         <FadeIn>
           <div className="mb-12">
-            <p className="font-mono text-[10px] text-[#444] uppercase tracking-widest mb-3">
+            <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-3">
               01 / proyectos
             </p>
             <h2 className="text-2xl sm:text-3xl font-light text-white">
@@ -93,7 +98,7 @@ export default function Projects() {
           </div>
         </FadeIn>
 
-        {/* Grid 2×2 */}
+        {/* Grid */}
         <div className="grid sm:grid-cols-2 gap-px bg-white/5">
           {projects.map((p, i) => (
             <FadeIn key={p.title} delay={i * 70}>
@@ -102,22 +107,48 @@ export default function Projects() {
                 className="group w-full text-left bg-[#0a0a0a] px-8 py-8 flex flex-col justify-between min-h-[200px] hover:bg-white/[0.02] transition-colors duration-200 border border-transparent hover:border-white/5"
               >
                 <div>
-                  <p className="font-mono text-[10px] text-[#444] uppercase tracking-widest mb-3">
+                  <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-3">
                     {p.tag}
                   </p>
-                  <h3 className="text-white text-base font-light leading-snug group-hover:text-[#ccc] transition-colors duration-200 pr-6">
+                  <h3 className="text-white text-base font-light leading-snug group-hover:text-white transition-colors duration-200 pr-6">
                     {p.title}
                   </h3>
                 </div>
                 <div className="flex items-center justify-between mt-8">
-                  <span className="font-mono text-[10px] text-[#333] uppercase tracking-widest group-hover:text-[#555] transition-colors duration-200">
+                  <span className="font-mono text-[10px] text-white uppercase tracking-widest group-hover:text-white transition-colors duration-200">
                     Ver demo →
                   </span>
-                  <span className="text-[#2a2a2a] group-hover:text-[#666] transition-colors duration-200">
+                  <span className="text-white group-hover:text-white transition-colors duration-200">
                     <ExpandIcon />
                   </span>
                 </div>
               </button>
+            </FadeIn>
+          ))}
+
+          {caseStudies.map((p, i) => (
+            <FadeIn key={p.title} delay={(projects.length + i) * 70}>
+              <Link
+                href={p.href}
+                className="group w-full text-left bg-[#0a0a0a] px-8 py-8 flex flex-col justify-between min-h-[200px] hover:bg-white/[0.02] transition-colors duration-200 border border-transparent hover:border-white/5"
+              >
+                <div>
+                  <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-3">
+                    {p.tag}
+                  </p>
+                  <h3 className="text-white text-base font-light leading-snug group-hover:text-white transition-colors duration-200 pr-6">
+                    {p.title}
+                  </h3>
+                </div>
+                <div className="flex items-center justify-between mt-8">
+                  <span className="font-mono text-[10px] text-white uppercase tracking-widest group-hover:text-white transition-colors duration-200">
+                    {p.cta}
+                  </span>
+                  <span className="text-white group-hover:text-white transition-colors duration-200">
+                    <ExpandIcon />
+                  </span>
+                </div>
+              </Link>
             </FadeIn>
           ))}
         </div>

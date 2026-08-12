@@ -29,7 +29,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6">
         <FadeIn>
           <div className="mb-12">
-            <p className="font-mono text-[10px] text-[#444] uppercase tracking-widest mb-3">
+            <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-3">
               05 / contacto
             </p>
             <h2 className="text-2xl sm:text-3xl font-light text-white">
@@ -49,14 +49,14 @@ export default function Contact() {
                 className="group bg-[#0a0a0a] px-6 py-5 flex items-center justify-between hover:bg-white/3 transition-colors duration-200"
               >
                 <div>
-                  <p className="font-mono text-[10px] text-[#444] uppercase tracking-widest mb-1">
+                  <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-1">
                     {l.label}
                   </p>
-                  <p className="text-[#888] text-sm group-hover:text-white transition-colors duration-200">
+                  <p className="text-white text-sm group-hover:text-white transition-colors duration-200">
                     {l.value}
                   </p>
                 </div>
-                <span className="font-mono text-[#333] group-hover:text-white transition-colors duration-200 text-lg">
+                <span className="font-mono text-white group-hover:text-white transition-colors duration-200 text-lg">
                   →
                 </span>
               </a>

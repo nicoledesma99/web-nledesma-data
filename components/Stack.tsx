@@ -10,16 +10,16 @@ const categories = [
     tools: ["SQL Server", "MySQL", "BigQuery", "PostgreSQL"],
   },
   {
-    label: "Code",
-    tools: ["Python", "Pandas", "Scikit-learn", "SQL Avanzado"],
-  },
-  {
     label: "Cloud",
-    tools: ["GCP", "Dataflow", "Apache Beam", "Docker"],
+    tools: ["GCP", "Dataflow", "Apache Beam", "Microsoft Fabric"],
   },
   {
     label: "Web",
     tools: ["Next.js", "React", "Tailwind", "Vercel"],
+  },
+  {
+    label: "IA Agéntica",
+    tools: ["LangGraph", "LangSmith", "LangChain"],
   },
 ];
 
@@ -29,7 +29,7 @@ export default function Stack() {
       <div className="max-w-7xl mx-auto px-6">
         <FadeIn>
           <div className="mb-12">
-            <p className="font-mono text-[10px] text-[#444] uppercase tracking-widest mb-3">
+            <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-3">
               02 / stack
             </p>
             <h2 className="text-2xl sm:text-3xl font-light text-white">
@@ -42,14 +42,14 @@ export default function Stack() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-white/5">
             {categories.map((cat) => (
               <div key={cat.label} className="bg-[#0a0a0a] p-5">
-                <p className="font-mono text-[10px] text-[#555] uppercase tracking-widest mb-4">
+                <p className="font-mono text-[10px] text-white uppercase tracking-widest mb-4">
                   {cat.label}
                 </p>
                 <ul className="space-y-2">
                   {cat.tools.map((tool) => (
                     <li
                       key={tool}
-                      className="text-[#888] text-sm font-light hover:text-white transition-colors duration-150 cursor-default"
+                      className="text-white text-sm font-light hover:text-white transition-colors duration-150 cursor-default"
                     >
                       {tool}
                     </li>

@@ -22,7 +22,7 @@ export default function Clock() {
   }, []);
 
   return (
-    <span className="font-mono text-xs text-[#444] tabular-nums">
+    <span className="font-mono text-xs text-white tabular-nums">
       {time}
     </span>
   );
